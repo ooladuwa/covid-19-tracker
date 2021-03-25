@@ -41,8 +41,8 @@ function App() {
         .then((response) => response.json())
         .then((data) => {
           const countries = data.map((country) => ({
-            name: country.country, // United States, United Kingdom, etc.
-            value: country.countryInfo.iso2, // UK, USA, FR, etc.
+            name: country.country,
+            value: country.countryInfo.iso2,
           }));
 
           const sortedData = sortData(data);
@@ -128,10 +128,12 @@ function App() {
       </div>
       <Card className="app__right">
         <CardContent>
-          <h3>Live Cases by Country</h3>
-          <Table countries={tableData} />
-          <h3 className="app__graphTitle">Worldwide new {casesType}</h3>
-          <LineGraph className="app__graph" casesType={casesType} />
+          <div className="app__information">
+            <h3>Live Cases by Country</h3>
+            <Table countries={tableData} />
+            <h3 className="app__graphTitle">Worldwide new {casesType}</h3>
+            <LineGraph className="app__graph" casesType={casesType} />
+          </div>
         </CardContent>
       </Card>
     </div>
