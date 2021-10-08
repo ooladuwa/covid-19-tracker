@@ -12,4 +12,4 @@ STEPS
 8. Create chart
 9. Create map
 10. Styling
-11. Deploy
+11. Deploy @ https://onaje-covid-19-tracker.netlify.app/
